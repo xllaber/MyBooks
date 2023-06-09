@@ -8,6 +8,13 @@ CREATE table author (
     country varchar(50) not null
 );
 
+create table saga (
+    id varchar(5) primary key,
+    name varchar(50) not null,
+    publishStart date not null,
+    publishEnd date
+);
+
 create table  book (
     id varchar(5) primary key,
     title varchar(100) not null,
@@ -22,11 +29,4 @@ create table  book (
     sagaId varchar(5),
     foreign key (authorId) references author(id),
     foreign key (sagaId) references saga(id)
-);
-
-create table saga (
-    id varchar(5) primary key,
-    name varchar(50) not null,
-    publishStart date not null,
-    publishEnd date
 );
