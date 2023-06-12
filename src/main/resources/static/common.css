@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+
+* {
+    margin: 0;
+    font-family: 'Tomorrow', sans-serif;
+    font-size: 20px;
+}
+
+nav{
+    background-color: #203468;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.page-insert-links {
+    display: flex;
+    gap: 50px;
+}
+
+.book-icon {
+    color: white;
+    font-size: 40px;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: white;
+    transition: transform .2s;
+}
+
+.nav-links:hover{
+    transform: scale(1.2);
+    color: gold;
+}
