@@ -5,6 +5,7 @@ use MyBooks;
 CREATE table author (
     id varchar(5) primary key,
     name varchar(100) not null,
+    img varchar(50),
     country varchar(50) not null
 );
 
@@ -25,6 +26,7 @@ create table  book (
     publishDate date,
     startDate date not null,
     finishDate date not null,
+    img varchar(50),
     authorId varchar(5) not null,
     sagaId varchar(5),
     foreign key (authorId) references author(id),
