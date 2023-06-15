@@ -7,11 +7,12 @@
     font-size: 20px;
 }
 
-nav{
+#nav{
     background-color: #203468;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: 20px;
 }
 
@@ -34,4 +35,42 @@ nav{
 .nav-links:hover{
     transform: scale(1.2);
     color: gold;
+    cursor: pointer;
+}
+
+#footer{
+    background-color: #203468;
+    color: white;
+    /*text-align: center;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#footer-container {
+    width: 85%;
+}
+
+#text-social-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icon {
+    font-size: 25px;
+    transition: transform .2s;
+    margin-right: 5px;
+}
+
+.social-icon:hover {
+    color: gold;
+    transform: scale(1.2);
+}
+
+.copy{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
