@@ -1,5 +1,8 @@
 package com.llacerximo.mybooks.db;
 
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -13,6 +16,7 @@ public class DBUtil {
     final static String DB = "MyBooks";
     final static String USER = "root";
     final static String PASSWORD = "root";
+    private static DataSource datasource;
 
     static String connectionString = String.format("%s://%s/%s?user=%s&password=%s", DRIVER, URL, DB, USER, PASSWORD);
 
@@ -22,6 +26,18 @@ public class DBUtil {
         } catch (Exception e) {
             throw new RuntimeException("Error al conectar con la bbdd");
         }
+    }
+
+    public static DataSource getDatasource() {
+        if(datasource == null) {
+            DriverManagerDataSource dataSource = new DriverManagerDataSource();
+            dataSource.setDriverClassName("org.mariadb.jdbc.Driver");
+            dataSource.setUrl("jdbc:mariadb://localhost:3306/MyBooks");
+            dataSource.setUsername("root");
+            dataSource.setPassword("root");
+            datasource = dataSource;
+        }
+        return datasource;
     }
 
     public static void closeConnection(Connection connection){
