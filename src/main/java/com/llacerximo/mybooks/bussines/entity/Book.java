@@ -12,23 +12,43 @@ public class Book {
     private Date finishDate;
     private Date publishDate;
     private int pages;
+    private int sagaNum;
+    private Boolean fave;
     private Author author;
     private Saga saga;
-
-
-    public Book(String id, String title, Date starDate, Date finishDate, int pages, Author author) {
-        this.id = id;
-        this.title = title;
-        this.starDate = starDate;
-        this.finishDate = finishDate;
-        this.pages = pages;
-        this.author = author;
-    }
 
     public Book(String id, String title) {
         this.id = id;
         this.title = title;
     }
+
+    public Book(String id, String title, String opinion, String img, Date starDate, Date finishDate, Date publishDate, int pages, int sagaNum, Author author, Saga saga) {
+        this.id = id;
+        this.title = title;
+        this.opinion = opinion;
+        this.img = img;
+        this.starDate = starDate;
+        this.finishDate = finishDate;
+        this.publishDate = publishDate;
+        this.pages = pages;
+        this.sagaNum = sagaNum;
+        this.author = author;
+        this.saga = saga;
+    }
+
+    public Book(String id, String title, String opinion, String img, Date starDate, Date finishDate, Date publishDate, int pages, int sagaNum, Boolean fave) {
+        this.id = id;
+        this.title = title;
+        this.opinion = opinion;
+        this.img = img;
+        this.starDate = starDate;
+        this.finishDate = finishDate;
+        this.publishDate = publishDate;
+        this.pages = pages;
+        this.sagaNum = sagaNum;
+        this.fave = fave;
+    }
+
 
     public String getId() {
         return id;
@@ -108,5 +128,21 @@ public class Book {
 
     public void setSaga(Saga saga) {
         this.saga = saga;
+    }
+
+    public int getSagaNum() {
+        return sagaNum;
+    }
+
+    public void setSagaNum(int sagaNum) {
+        this.sagaNum = sagaNum;
+    }
+
+    public Boolean getFave() {
+        return fave;
+    }
+
+    public void setFave(Boolean fave) {
+        this.fave = fave;
     }
 }
