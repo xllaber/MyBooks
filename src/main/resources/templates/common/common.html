@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/07c0bca522.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../static/common.css">
+<!--    <link rel="stylesheet" th:href="@{/css/common.css}">-->
+    <title>MyBooks</title>
+</head>
+<body>
+    <div th:fragment = "nav" id="nav">
+        <div class="page-insert-links">
+            <a th:href="@{/index}" class="nav-links">HOME</a>
+            <a th:href="@{/authors}" class="nav-links">AUTHORS</a>
+            <a th:href="@{/sagas}" class="nav-links">SAGAS</a>
+        </div>
+        <i class="fa-solid fa-book-open book-icon"></i>
+        <div class="page-insert-links">
+            <a th:href="@{/index/addBook}" class="nav-links">ADD BOOK</a>
+            <a th:href="@{/authors/addAuthor}" class="nav-links">ADD AUTHOR</a>
+            <a th:href="@{/sagas/addSaga}" class="nav-links">ADD SAGA</a>
+        </div>
+    </div>
+    <div th:fragment = "footer" id="footer">
+        <div id="footer-container">
+            <div id="text-social-container">
+                <div class="footer-text">
+                    This is a personal project where I write down the books I've read so far and some info about them
+                </div>
+                <div class="footer-social-media">
+                    <i class="fa-brands fa-twitter social-icon"></i>
+                    <i class="fa-brands fa-instagram social-icon"></i>
+                    <i class="fa-brands fa-github social-icon"></i>
+                </div>
+            </div>
+            <div class="copy">
+                &copy; 2023 All rights reserved
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
