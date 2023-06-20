@@ -6,14 +6,15 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://kit.fontawesome.com/07c0bca522.js" crossorigin="anonymous"></script>
-<!--  <link rel="stylesheet" href="../static/common.css">-->
   <link rel="stylesheet" th:href="@{/css/common.css}">
   <title>MyBooks</title>
 </head>
 <body>
   <nav th:replace="~{common/common :: nav}"/>
   <main>
-    Hola hola hola
+    <p th:each="book : ${books}">
+      <span th:text="${book.title}"></span>
+    </p>
   </main>
   <footer th:replace="~{common/common :: footer}"/>
 </body>

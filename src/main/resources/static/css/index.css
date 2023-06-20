@@ -1,0 +1,42 @@
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #203468;
+    color: white;
+}
+
+#index-container {
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.options-link {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    transition: transform .2s;
+}
+
+.options-link:hover{
+    transform: scale(1.2);
+    color: gold;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-top: 10px;
+}
+
