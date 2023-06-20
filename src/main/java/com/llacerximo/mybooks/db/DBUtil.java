@@ -31,8 +31,8 @@ public class DBUtil {
     public static DataSource getDatasource() {
         if(datasource == null) {
             DriverManagerDataSource dataSource = new DriverManagerDataSource();
-            dataSource.setDriverClassName("org.mariadb.jdbc.Driver");
-            dataSource.setUrl("jdbc:mariadb://localhost:3306/MyBooks");
+            dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+            dataSource.setUrl("jdbc:mysql://localhost:3306/MyBooks");
             dataSource.setUsername("root");
             dataSource.setPassword("root");
             datasource = dataSource;

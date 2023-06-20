@@ -4,6 +4,7 @@ import com.llacerximo.mybooks.bussines.entity.Book;
 import com.llacerximo.mybooks.db.DBUtil;
 import com.llacerximo.mybooks.persistance.BookRepository;
 import com.llacerximo.mybooks.persistance.TableNames;
+import com.llacerximo.mybooks.persistance.mapper.BookRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.sql.Connection;
@@ -22,8 +23,9 @@ public class JdbcBookRepositoryImpl implements BookRepository {
     @Override
     public List<Book> getAll(int year) {
         try(Connection connection = DBUtil.getConnection()) {
-            String sql = "select * from " + tableName.name() + " where finishDate = ?";
-            return null;
+            String sql = "select * from " + tableName.name() + " where year(finishDate) = ?";
+            List<Book> books = jdbcTemplate.query(sql, new BookRowMapper(), year);
+            return books;
         } catch (SQLException e){
             throw new RuntimeException(e.getMessage());
         }
