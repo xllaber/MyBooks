@@ -16,8 +16,8 @@ public class BookController {
 
     private BookService bookService = new BookServiceImpl();
 
-    @GetMapping("/{year}")
-    public String getAll(@PathVariable int year, Model model) {
+    @GetMapping("/")
+    public String getAll(@RequestParam int year, Model model) {
         model.addAttribute("books", bookService.getAll(year));
         return "books";
     }

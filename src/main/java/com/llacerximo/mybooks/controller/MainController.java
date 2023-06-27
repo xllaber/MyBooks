@@ -12,7 +12,7 @@ public class MainController {
     @GetMapping("/")
     public String index(Model model) {
         Calendar calendar = new GregorianCalendar();
-        model.addAttribute("year", calendar.get(Calendar.YEAR));
+        model.addAttribute("yearSort", calendar.get(Calendar.YEAR));
         return "index";
     }
 

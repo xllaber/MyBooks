@@ -15,7 +15,7 @@
       <h1>WELCOME</h1>
       <h2>What would you like to do?</h2>
       <div class="options">
-        <a th:href="@{${'/books/' + year}}" class="options-link">SEE BOOKS</a>
+        <a th:href="@{/books/(year = yearSort)}" class="options-link">SEE BOOKS</a>
         <a th:href="@{/authors}" class="options-link">SEE AUTHORS</a>
         <a th:href="@{/sagas}" class="options-link">SEE SAGAS</a>
         <a th:href="@{/books/add}" class="options-link">ADD BOOKS</a>
